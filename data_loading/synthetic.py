@@ -1,5 +1,5 @@
 '''
-Generates synthetic data.
+Generates synthetic data. More information coming.
 '''
 
 import numpy as np
