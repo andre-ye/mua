@@ -2,7 +2,10 @@
 Arranges the highest-disagreement images from the LIDC-IDRI dataset
 and arranges them into the associated directory.
 
-A small subset of the LIDC-IDRI dataset used for this script is published
+For use in image annotations.
+For model training, see lidc_idri_training.py.
+
+A subset of the LIDC-IDRI dataset used for this script is published
 on Kaggle at the following link:
 https://www.kaggle.com/datasets/washingtongold/lidcidri30
 
@@ -52,7 +55,6 @@ for CURRINDEX in range(3):
         print(pid)
 
         try:
-#         for i in range(1):
 
             scan = pl.query(pl.Scan).filter(pl.Scan.patient_id == pid).first()
             vol = scan.to_volume()
@@ -62,7 +64,6 @@ for CURRINDEX in range(3):
             for i_, anns in enumerate(nods):
 
                 try:
-    #                 for i in range(1):
 
                     cmask,cbbox,masks = consensus(anns, clevel=0.5,
                                                   pad=[(20,20), (20,20), (0,0)])
