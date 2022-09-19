@@ -7,6 +7,7 @@ import imgaug as ia
 import imgaug.augmenters as iaa
 from tqdm import tqdm
 import random
+import matplotlib.pyplot as plt
 
 class Dataset(tf.keras.utils.Sequence):
     
