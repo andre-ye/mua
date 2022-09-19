@@ -1,3 +1,22 @@
+'''
+Arranges the highest-disagreement images from the LIDC-IDRI dataset
+and arranges them into the associated directory, as well as two
+versions of masks - standard (50th percentile, median annotation)
+and derived min/max (the min hypothesis as the intersection of all
+annotations, the max hypothesis as the union).
+
+For use in model training.
+For image annotations, see lidc_idri_annot.py.
+
+A subset of the LIDC-IDRI dataset used for this script is published
+on Kaggle at the following link:
+https://www.kaggle.com/datasets/washingtongold/lidcidri30
+
+The other subset will be released at a later date.
+
+Make sure pylidc is installed.
+'''
+
 import pylidc as pl
 import numpy as np
 import matplotlib.pyplot as plt
